@@ -4,113 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>사이드 메뉴</title>
+    <title>짤방</title>
     <style>
         * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
             margin: 0px;
             padding: 0px;
         }
 
-        a:visited,
-        a:link {
-            color: rgba(255, 255, 255, 0.87);
-        }
-
-        #sidebar {
-            background-color: white;
-            width: 8rem;
-            height: 100%;
-            position: fixed;
-            /* padding: 15px; */
-
-        }
-
-        #sidebar a {
-            display: block;
+        header {
+            /* margin: 15px; */
+            width: 100%;
+            background-color: #547AD0;
+            padding: 12px 0px 12px 0px;
             text-align: center;
-            margin: 1.2rem 0;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        #upperLayer {
-            position: relative;
-            z-index: 1;
-            height: 100%;
-            background-color: black;
-            margin: 0 0 0 0;
-            padding: 10px;
-            width: 8rem;
-        }
-
-        #lowerLayer {
-            box-shadow: 5px 5px 1rem rgba(0, 0, 0, 0.6);
+            color: #FFF;
+            /* display: block; */
             position: fixed;
-            top: 5%;
-            width: 1rem;
-            background-color: white;
-            left: 7rem;
-            height: 90%;
+            top: 0px;
+            font-size: 14pt;
         }
 
-        #main {
-            margin-left: 8rem;
-            padding: 1rem 3rem;
-            font-size: 1.3rem;
-            background-color: #202020;
-
+        img {
+            display: inline-table;
+            width: 22%;
+            height: 22%;
+            margin: 1%;
+            border: 1px solid #DDD;
         }
 
-        #main p {
-            margin: 1.2rem 0;
-            color: rgba(255, 255, 255, 0.87)
+        article {
+            display: table;
+            table-layout: fixed;
+            /* text-align: justisfy; */
+            /* flex-wrap: wrap; */
+            /* justify-content: flex-start; */
+            /* text-align: justify; */
+            width: 95%;
+            margin: 65px auto 0;
         }
+
+        a {}
     </style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script> -->
+    <script type="text/javascript">
+        function copy(img) {
+            var canvas = document.createElement("canvas"), ctx = canvas.getContext("2d");
+            canvas.width = img.naturalWidth;
+            canvas.height = img.naturalHeight;
+            ctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);
+
+            //아래가 복사 부분
+            canvas.toBlob(function (blob) {
+                navigator.clipboard.write([
+                    new ClipboardItem({ 'image/png': blob })
+                ])
+            }, 'image/png');
+
+            // Safari를 위한 코드, 이나 동작 안함
+            // var imgNode = document.createElement('img');
+            // imgNode.src = canvas.toDataURL();
+            // var div = document.createElement('div');
+            // div.contentEditable = true;
+            // div.appendChild(imgNode);
+            // console.log(div);
+            // document.body.appendChild(div);
+            // SelectText(div);
+            // document.execCommand('Copy');
+            // document.body.removeChild(div);
+
+
+
+        }
+        function SelectText(element) {
+            var doc = document;
+            if (doc.body.createTextRange) {
+                var range = document.body.createTextRange();
+                range.moveToElementText(element);
+                range.select();
+            } else if (window.getSelection) {
+                var selection = window.getSelection();
+                var range = document.createRange();
+                range.selectNodeContents(element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+
+    </script>
 </head>
 
 <body>
-    <div id="sidebar">
-        <div id="upperLayer">
-            <a href="">팀</a>
-            <a href="">선수</a>
-            <a href="">일정</a>
-            <a href="">코칭</a>
-            <a href="">메디컬</a>
-        </div>
-        <div id="lowerLayer">
-        </div>
-    </div>
-    <div id="main">
-        <p>
-            이는 사랑의 봄날의 아름답고 것은 장식하는 있는가? 것은 있으며, 구할 얼음 풀밭에 군영과 그들은 대고, 피가 철환하였는가? 끓는 우리 가슴이 내려온 가치를 사막이다. 힘차게 이상은 소담스러운
-            피가 고동을 유소년에게서 것이다. 구하지 이것이야말로 심장은 따뜻한 대고, 가는 인생을 유소년에게서 불러 듣는다. 보는 따뜻한 남는 있음으로써 넣는 동력은 무엇을 대중을 피가 뿐이다. 만천하의
-            맺어, 따뜻한
-            소담스러운 넣는 그러므로 무엇을 위하여 꾸며 듣는다. 품으며, 구할 있으며, 투명하되 무엇을 때문이다. 것은 오아이스도 생생하며, 꾸며 찾아 칼이다.
-        </p>
+    <header>짤방</header>
+    <article>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal2.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal3.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="shHavingSex.jpg" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal5.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal6.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="haveFaith.jpg" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="sigh.gif" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="hmm.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="sigh.jpg" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="18.jpg" alt=""></a>
+        <!-- <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal12.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal13.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal14.png" alt=""></a>
+        <a href="javascript:void(0);" onclick="copy(this.firstChild)"><img src="zzal15.png" alt=""></a> -->
 
-        <p> 우리의 얼마나 황금시대의 뜨고, 아니다. 청춘의 커다란 만천하의 만물은 맺어, 칼이다. 가지에 바이며, 미인을 기관과 청춘의 같지 약동하다. 그들은 노년에게서 인간이 끝까지 못하다 같지 따뜻한
-            청춘것이다. 천하를 그들을 튼튼하며, 황금시대를 사막이다. 열매를 청춘의 황금시대의 품에 커다란 위하여서. 뭇 유소년에게서 천자만홍이 날카로우나 열락의 힘차게 생의 충분히 그들은 뿐이다.
-            속잎나고, 할지니, 생생하며, 생의 거친 열락의 우리 쓸쓸하랴? 청춘 주며, 뜨거운지라, 구할 새 쓸쓸하랴?</p>
-
-        <p>별과 바이며, 우리 길을 우리 몸이 실로 능히 사막이다. 위하여, 위하여서 끝에 날카로우나 인간은 끓는 보배를 것이다. 못하다 기쁘며, 산야에 불어 우리는 것이다. 청춘 속에서 앞이 행복스럽고
-            인생의 무한한 가지에 위하여서 있는가? 든 간에 전인 무엇이 수 반짝이는 못할 보라. 황금시대의 시들어 주며, 가지에 그들은 불어 것이다. 두기 이상의 없는 원질이 할지라도 품었기 보라. 창공에
-            풀이 풍부하게 꽃이 사는가 튼튼하며, 새 꽃이 있으랴? 아니더면, 심장은 얼마나 약동하다. 인생을 얼마나 천고에 길지 칼이다. 쓸쓸한 귀는 예가 무엇을 품에 때에, 오아이스도 이것이다.</p>
-
-        <p>넣는 주는 원대하고, 부패뿐이다. 하였으며, 소금이라 새 우리의 이상은 운다. 예수는 따뜻한 커다란 천고에 칼이다. 그들의 꽃 귀는 영락과 피어나기 얼음이 얼마나 힘있다. 그들은 구할 수 쓸쓸한
-            것이다.보라, 충분히 공자는 철환하였는가? 없으면, 가슴이 붙잡아 공자는 말이다. 있는 무엇을 듣기만 넣는 것이다. 심장은 피가 듣기만 이 인간의 뜨거운지라, 보배를 이상의 대고, 그리하였는가?
-            너의 자신과 밝은 귀는 이것이야말로 것은 살았으며, 인도하겠다는 부패뿐이다.</p>
-
-        <p>같으며, 온갖 못하다 품고 있는 방황하여도, 풍부하게 그들은 얼음에 위하여서. 튼튼하며, 석가는 하였으며, 위하여서. 천고에 이것이야말로 들어 몸이 오직 말이다. 피부가 거친 바이며, 원대하고,
-            위하여서 것은 얼마나 들어 사막이다. 소담스러운 두손을 못하다 그들의 이상의 있는 미묘한 약동하다. 예가 노년에게서 없으면 눈이 듣는다. 때까지 우리는 갑 수 앞이 원질이 교향악이다. 때에,
-            힘차게 곳이 같지 이것이야말로 피가 봄바람을 가슴에 우리 것이다. 사는가 사랑의 오아이스도 새가 꽃이 발휘하기 우리 것은 평화스러운 끓는다. 이상을 인류의 고행을 타오르고 그리하였는가?
-            관현악이며, 공자는 그들은 이상, 같은 이것은 눈에 것이다.</p>
-    </div>
+    </article>
 </body>
 
 </html>
